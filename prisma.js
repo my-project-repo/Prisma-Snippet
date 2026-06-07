@@ -10,7 +10,7 @@ const prisma = new PrismaClient({ adapter });
 const user = await prisma.student.create({
   data: {
     Name: "Roshan",
-    Roll: 14,
+    Roll: 15,
   },
 });
 
