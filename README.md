@@ -118,14 +118,26 @@ After pushing the schema, generate the Prisma Client:
 npx prisma generate
 ```
 
-You can now import Prisma in your project:
+ ## You can now import Prisma in your project:
 
+Create Prisma Client Instance
+
+Create a file such as:
+
+src/lib/prisma.js
+
+Add the following code:
 ```js
+import "dotenv/config";
+import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
-```
+const connectionString = `${process.env.DATABASE_URL}`;
 
+const adapter = new PrismaPg({ connectionString });
+const prisma = new PrismaClient({ adapter });
+
+```
 ---
 
 ## Verify Tables
