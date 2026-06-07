@@ -7,13 +7,13 @@ Install the required dependencies:
 ### Development Dependencies
 
 ```bash
-npm install prisma @types/pg --save-dev
+npm install prisma --save-dev
 ```
 
 or
 
 ```bash
-npm install prisma @types/pg -D
+npm install prisma -D
 ```
 
 ### Runtime Dependencies
